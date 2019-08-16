@@ -1,0 +1,180 @@
+.nav-links{
+	position: relative;
+	left: 1%;
+}
+.topheader{
+	
+	background-image: url("../images/background2.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.no-padding{
+	padding: 0%;
+	margin: 0%;
+}
+.searchtextfield{
+    height: 200%;
+    width:80%;
+    font-size: 200%;
+	color: black;
+}
+.main_searchtextfield{
+	width:80%;
+	font-size: 110%;
+	color: black;
+}
+.search-div{
+	color: red;
+}
+.mainsearch-div{
+	color: red;
+}
+.product-categories{
+	border: 1px solid #73AD21;
+	padding-top: 2%;
+	max-width:800px;
+	margin: auto;
+
+}
+
+.latest-products{
+	max-width:950px;
+	margin: auto;
+	
+}
+.latest-item{
+	border: 1px solid #73AD21;
+	margin: auto;
+	padding: 0%;
+	padding-top:2%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	width: 20%;
+
+}
+.innerdiv{
+	position: relative;
+	top : 20%;
+	border-top: 1px solid gray;
+	text-align: center;
+	padding-top: 5%;
+				
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			.container1 {
+				display: grid;
+				grid-gap: 50px;				
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				grid-template-rows: repeat(3, 100px);
+				max-width:800px;
+				margin: auto;
+				border: 1px solid #73AD21;
+				padding:5%;
+				padding-top: 2%;
+				
+			}
+			
+			
+			.container3 {
+				display: grid;
+				<!grid-gap: 1px;!>				
+				grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+				grid-template-rows: repeat(2, 50px);
+				max-width:100%;
+				margin: auto;
+				
+			}
+			
+			
+			.container2 {
+				display: grid;
+				grid-gap: 40px;				
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				grid-template-rows: repeat(4, 300px);
+				max-width:940px;
+				margin: auto;
+				
+				
+			}
+			
+			
+			
+			
+			.container > div > img {
+				width: 60%;
+				height: 100%;
+				<!object-fit: cover;!>
+			}
+			
+			.item12 {
+				border: 1px solid gray;
+				
+				
+			}
+			.item22 {
+				border: 1px solid gray;
+				
+			}
+			.item32 {
+				border: 1px solid gray;
+			}
+			.item42 {
+				border: 1px solid gray;
+			}
+			.item52 {
+				border: 1px solid gray;
+				
+			}
+			.item62 {
+				border: 1px solid gray;
+		
+			}
+			.item72 {
+				border: 1px solid gray;
+			}
+			.item82 {
+				border: 1px solid gray;
+			}
+			
+			
+			.menu {
+				border: 1px solid gray;
+				border-bottom: 0px;
+				width: 100%;
+				position: relative;
+				top : 50%;
+				left: 0%;
+			}
+			.intro {
+				border: 1px solid gray;
+				border-bottom: 0px;
+				position: relative;
+				left : 0%;
+			}
+			.item33 {
+				border: 1px solid gray;
+				position: relative;
+				top : 0%;
+			}
