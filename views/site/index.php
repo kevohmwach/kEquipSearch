@@ -22,6 +22,8 @@ foreach($categories as $category){
 }
 
 //print_r($data); exit;
+//phpversion();
+//phpinfo(); exit;
 
 ?>
 <div class="site-index">
