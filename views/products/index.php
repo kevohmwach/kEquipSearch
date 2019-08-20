@@ -10,12 +10,19 @@ use yii\helpers\Url;
 
 $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
+//if(){}
 
 $products = Electricalcategory::find()->asArray()->all();
 $data = array();
 $counter = 0;
 $maxrecords = Electricalcategory::find()->count();
 //echo $maxrecords;
+//$type = $_GET('id'); 
+//echo $type; exit;
+//Yii:$app->request->queryParams['type'];
+//if(!empty($_GET('type'))){
+
+//}
 
 foreach($products as $product){ 
 	$data[$counter] = $product;

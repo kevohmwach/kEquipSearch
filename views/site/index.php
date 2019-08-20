@@ -38,17 +38,17 @@ foreach($categories as $category){
 					<div class = "row">
 						<div class="col-md-4" style="padding-bottom:  5%">
 							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[0]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="<?php echo Url::toRoute('products/index').'?type=1'; ?>"><?=$data[0]['kequip_prod_category'].' '.'Equipment';?></a></p>
+							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=1'; ?>"><?=$data[0]['kequip_prod_category'].' '.'Equipment';?></a></p>
 						</div>
 						
 						<div class="col-md-4">
 							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[1]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[1]['kequip_prod_category'].' '.'Equipment';?></a></p>
+							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=2'; ?>"><?=$data[1]['kequip_prod_category'].' '.'Equipment';?></a></p>
 						</div>
 						
 						<div class="col-md-4">
 							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[2]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[2]['kequip_prod_category'].' '.'Equipment';?></a></p>
+							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=3'; ?>"><?=$data[2]['kequip_prod_category'].' '.'Equipment';?></a></p>
 						</div>
 						
 					</div>

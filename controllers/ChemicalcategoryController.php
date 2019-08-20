@@ -3,19 +3,18 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Electricalcategory;
-use app\models\ElectricalcategorySearch;
+use app\models\Chemicalcategory;
+use app\models\ChemicalcategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\UploadForm;
 use yii\web\UploadedFile;
-//use app\models\UploadForm;
 
 /**
- * ElectricalcategoryController implements the CRUD actions for Electricalcategory model.
+ * ChemicalcategoryController implements the CRUD actions for Chemicalcategory model.
  */
-class ElectricalcategoryController extends Controller
+class ChemicalcategoryController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -33,12 +32,12 @@ class ElectricalcategoryController extends Controller
     }
 
     /**
-     * Lists all Electricalcategory models.
+     * Lists all Chemicalcategory models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ElectricalcategorySearch();
+        $searchModel = new ChemicalcategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +47,7 @@ class ElectricalcategoryController extends Controller
     }
 
     /**
-     * Displays a single Electricalcategory model.
+     * Displays a single Chemicalcategory model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,32 +60,34 @@ class ElectricalcategoryController extends Controller
     }
 
     /**
-     * Creates a new Electricalcategory model.
+     * Creates a new Chemicalcategory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Electricalcategory();
-		$model2 = new UploadForm();
-		if ($model->load(Yii::$app->request->post())) {
-				$model2->imageFile = UploadedFile::getInstance($model, 'kequip_prod_avatar');
-				if ($model2->upload()) {
-					// file is uploaded successfully
-					$file_strl =  (string) $model2->imageFile;
-					$model->kequip_prod_avatar = $file_strl;
-				}else {echo 'wrong file format'; exit;}
-				if($model->save()){
-					return $this->redirect(['view', 'id' => $model->id_kequip_prod_electricalsub]);
-				}else{echo 'Failed to insert Records';}
+        $model = new Chemicalcategory();
+        $model2 = new UploadForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $model2->imageFile = UploadedFile::getInstance($model, 'kequip_prod_chemicalsubavatar');
+                if ($model2->upload()) {
+                    // file is uploaded successfully
+                    $file_strl =  (string) $model2->imageFile;
+                    $model->kequip_prod_chemicalsubavatar = $file_strl;
+                }else {echo 'wrong file format'; exit;}
+                if($model->save()){
+                    return $this->redirect(['view', 'id' => $model->id_kequip_prod_chemicalsub]);
+                }else{echo 'Failed to insert Records';}   
         }
+
         return $this->render('create', [
             'model' => $model,
         ]);
     }
 
     /**
-     * Updates an existing Electricalcategory model.
+     * Updates an existing Chemicalcategory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,19 +97,16 @@ class ElectricalcategoryController extends Controller
     {
         $model = $this->findModel($id);
         $model2 = new UploadForm();
-
         if ($model->load(Yii::$app->request->post())) {
-
-                $model2->imageFile = UploadedFile::getInstance($model, 'kequip_prod_avatar');
+            $model2->imageFile = UploadedFile::getInstance($model, 'kequip_prod_chemicalsubavatar');
                 if ($model2->upload()) {
                     // file is uploaded successfully
                     $file_strl =  (string) $model2->imageFile;
-                    $model->kequip_prod_avatar = $file_strl;
+                    $model->kequip_prod_chemicalsubavatar = $file_strl;
                 }else {echo 'wrong file format'; exit;}
                 if($model->save()){
-                    return $this->redirect(['view', 'id' => $model->id_kequip_prod_electricalsub]);
+                    return $this->redirect(['view', 'id' => $model->id_kequip_prod_chemicalsub]);
                 }else{echo 'Failed to insert Records';}
-
         }
 
         return $this->render('update', [
@@ -117,7 +115,7 @@ class ElectricalcategoryController extends Controller
     }
 
     /**
-     * Deletes an existing Electricalcategory model.
+     * Deletes an existing Chemicalcategory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -131,15 +129,15 @@ class ElectricalcategoryController extends Controller
     }
 
     /**
-     * Finds the Electricalcategory model based on its primary key value.
+     * Finds the Chemicalcategory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Electricalcategory the loaded model
+     * @return Chemicalcategory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Electricalcategory::findOne($id)) !== null) {
+        if (($model = Chemicalcategory::findOne($id)) !== null) {
             return $model;
         }
 

@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\Models\ElectricalCategory */
 
-$this->title = 'Create Electrical Category';
-$this->params['breadcrumbs'][] = ['label' => 'Electrical Categories', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+//$this->title = 'Create Electrical Category';
+//$this->params['breadcrumbs'][] = ['label' => 'Electrical Categories', 'url' => ['index']];
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="electrical-category-create">
 
