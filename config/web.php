@@ -70,8 +70,8 @@ if (IS_GAE) {
     // Use Google Storage for assets
     $config['components']['assetManager'] = [
         'class' => 'Oitmain\Yii2\Google\GoogleStorageAssetManager',
-        'googleStorageBucket' => '<your-bucket>',
-        'baseUrl' => 'https://storage.googleapis.com/<your-bucket>',
+        'googleStorageBucket' => 'dauntless-drive-249913.appspot.com',
+        'baseUrl' => 'https://storage.googleapis.com/dauntless-drive-249913.appspot.com',
         'basePath' => sys_get_temp_dir(),
     ];
     // Get client IP from proxy
