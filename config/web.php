@@ -64,9 +64,9 @@ $config = [
 
 
 
-if (IS_GAE) {
+//if (IS_GAE) {
     // Use tmp directory for runtime files
-    $config['runtimePath'] = sys_get_temp_dir();
+    //$config['runtimePath'] = sys_get_temp_dir();
     // Use Google Storage for assets
     /*$config['components']['assetManager'] = [
         //'class' => 'Oitmain\Yii2\Google\GoogleStorageAssetManager',
@@ -75,26 +75,32 @@ if (IS_GAE) {
         'basePath' => sys_get_temp_dir(),
     ];*/
     // Get client IP from proxy
-    $config['components']['request']['trustedHosts'] = [
-        'any' => ['X-Forwarded-For']
-    ];
-}
+    //$config['components']['request']['trustedHosts'] = [
+      //  'any' => ['X-Forwarded-For']
+  //  ];
+//}
 
 
 if (YII_ENV_DEV) {
+
+     // Get client IP from proxy
+    $ip = $config['components']['request']['trustedHosts'] = [
+        'any' => ['X-Forwarded-For']
+    ];
+
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['127.0.0.1', '::1', '$ip'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1', '8.8.8.8'],
+        'allowedIPs' => ['127.0.0.1', '::1', '$ip'],
     ];
 }
 
