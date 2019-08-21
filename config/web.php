@@ -69,7 +69,7 @@ if (IS_GAE) {
     $config['runtimePath'] = sys_get_temp_dir();
     // Use Google Storage for assets
     $config['components']['assetManager'] = [
-        'class' => 'Oitmain\Yii2\Google\GoogleStorageAssetManager',
+        'class' => 'kevohmwach\Yii2\Google\GoogleStorageAssetManager',
         'googleStorageBucket' => 'dauntless-drive-249913.appspot.com',
         'baseUrl' => 'https://storage.googleapis.com/dauntless-drive-249913.appspot.com',
         'basePath' => sys_get_temp_dir(),
