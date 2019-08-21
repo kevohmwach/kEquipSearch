@@ -9,7 +9,8 @@ use app\models\Categories;
 
 
 
-$categories = Categories::find()->asArray()->all();
+//echo 'welcome to remote files'; exit;
+/*$categories = Categories::find()->asArray()->all();
 $data = array();
 $counter = 0;
 $maxrecords = Categories::find()->count();
@@ -19,7 +20,7 @@ foreach($categories as $category){
 	$data[$counter] = $category;
 	//print_r($data); 
 	$counter = $counter + 1;
-}
+}*/
 
 //print_r($data); exit;
 //phpversion();
@@ -30,90 +31,7 @@ foreach($categories as $category){
 	<center>
 		<p><a href = "#">PRODUCT CATEGORIES</a></p>
 	</center>
-	<div class="container product-categories">
-		<center>
-			<?php 
-				if($maxrecords>=3){ 
-			?>
-					<div class = "row">
-						<div class="col-md-4" style="padding-bottom:  5%">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[0]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=1'; ?>"><?=$data[0]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[1]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=2'; ?>"><?=$data[1]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[2]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="<?php echo Url::toRoute('products/create').'?type=3'; ?>"><?=$data[2]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-					</div>
-
-			<?php 
-				} 
-			?>
-
-
-			<?php 
-				if($maxrecords>=6){ 
-			?>
-					<div class = "row">
-						<div class="col-md-4" style="padding-bottom:  5%">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[3]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[3]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[4]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[4]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[5]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[5]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-					</div>
-
-			<?php 
-				} 
-			?>
-
-
-
-				<?php 
-				if($maxrecords>=9){ 
-			?>
-					<div class = "row">
-						<div class="col-md-4" style="padding-bottom:  5%">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[6]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[6]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[7]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[7]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-						<div class="col-md-4">
-							<img src="<?= Yii::$app->request->baseUrl.'/uploads/'.$data[8]['kequip_prod_categoryavatar'];?>" width="150px" height="100px"/>
-							<p id="chemical"><a href="#"><?=$data[8]['kequip_prod_category'].' '.'Equipment';?></a></p>
-						</div>
-						
-					</div>
-
-			<?php 
-				} 
-			?>
-		</center>	
-	</div>
-	<br>
-	<br>
-	<br>
+	
 	<center>
 		<p>
 			<a href = "#">LATEST PRODUCTS</a>
