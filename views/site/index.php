@@ -5,7 +5,7 @@
 use yii\helpers\Url;
 
 $this->title = 'KEquipment Search';
-use app\models\categories;
+use app\models\Categories;
 
 
 
